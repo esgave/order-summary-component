@@ -1,0 +1,146 @@
+:root {
+    --PaleBlue: hsl(225, 100%, 94%);
+    --BrightBlue: hsl(245, 75%, 52%);
+    --VeryPaleBlue: hsl(225, 100%, 98%);
+    --DesaturatedBlue: hsl(224, 23%, 55%);
+    --DarkBlue: hsl(223, 47%, 23%);
+    --Purple: hsl(241, 66%, 65%);
+    --LighterPurple: hsl(244, 70%, 92%);
+    --Font: 'Red Hat Display', sans-serif;
+
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    /* Box Model Hack **/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url(../img/pattern-background-mobile.svg);
+    background-color: var(--PaleBlue);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: var(--Font);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--DesaturatedBlue);
+    text-align: center;
+    line-height: 1.5;
+}
+
+h1 {
+    font-weight: 900;
+    color: var(--DarkBlue);
+    margin: 0;
+    padding: 0;
+}
+
+.container-parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    max-width: 40rem;
+    width: 90%;
+}
+
+.container__text {
+    padding: 2.5rem;
+}
+
+.container__text--annual-plan {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--VeryPaleBlue);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+}
+
+.annual-plan--left {
+    display: flex;
+    align-items: right;
+}
+
+.annual-plan--details {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.annual-plan--details p {
+    margin: 0;
+}
+
+.annual-plan--details--bold {
+    font-weight: 900;
+    color: var(--DarkBlue);
+}
+
+.change-link {
+    display: flex;
+    align-items: center;
+    color: var(--BrightBlue);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.change-link:hover {
+    color: var(--Purple);
+    text-decoration: none;
+}
+
+.payment-link {
+    background-color: var(--BrightBlue);
+    display: flex;
+    justify-content: center;
+    color: var(--VeryPaleBlue);
+    font-weight: 700;
+    border-radius: 1rem;
+    padding: 1rem;
+
+}
+
+.box-shadow {
+    box-shadow: 0rem 1.5rem 1.5rem var(--LighterPurple);
+}
+
+.payment-link:hover {
+    background-color: var(--Purple);
+}
+
+.cancel-link {
+    font-weight: 700;
+    color: var(--DesaturatedBlue);
+}
+
+.cancel-link:hover {
+    color: var(--DarkBlue);
+}
+
+.payment-link,
+.cancel-link {
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    body {
+        background-image: url(../img/pattern-background-desktop.svg);
+    }
+}
